@@ -19,7 +19,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Testing
       run: |
-        dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude="[xunit*]\*" /p:CoverletOutput="./TestResults/" /p:Threshold=100
+        dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude="[xunit*]\*" /p:CoverletOutput="./TestResults/" /p:Threshold=50
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
       with:
